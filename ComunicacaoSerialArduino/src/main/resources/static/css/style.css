@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+/* CSS EXCLUSIVO PARA A PÁGINA HOME DOS COMANDOS DO ARDUINO  */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+}
+
+.principal {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.item {	
+	width: 50%;
+	height: 50vh;
+	text-align: center;	
+  padding-top: 50px;
+  font-family: 'Staatliches', cursive;   
+}
+
+.item-1 { 
+  background-color: #ff6c79; 
+}
+
+.item-2 {
+	background-color: #ffc60b;
+}
+
+.item-3 {
+	background-color: #36b793;  
+}
+
+.item-4 {
+	background-color: #8cf2ff;
+}
+
+@media (max-width:768px) {
+	.principal {
+		justify-content: center;
+		flex-direction: column;
+}
+}

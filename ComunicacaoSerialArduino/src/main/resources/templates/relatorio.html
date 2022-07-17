@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-br" xmlns:th="https://www.thymeleaf.org"
+  xmlns:sec="https://www.thymeleaf.org/thymleaf-extras-springsecurity5">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatório</title>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.css" rel="stylesheet" />
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.js"></script>
+
+  <title>Relatório</title>
+</head>
+
+<body>
+  <header>
+    <div id="header">
+      <!-- Navbar -->
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
+        <div class="container"> 
+            <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <!-- Somente o ADM Visualiza o campo para um novo procedimento -->
+                <div>
+                  <a class="nav-link" href="/index">Inicio</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <!-- Somente o Usuario Visualiza o campo para um novo Chamado -->
+                <div>
+                  <a class="nav-link" href="/home">Sistema</a>
+                </div>
+              </li>             
+            </ul>
+            <!-- Logout da sessao  -->            
+          </div>
+        </div>
+      </nav>
+  </header>
+  <!-- Navbar -->
+
+  <div class="container">
+    <h1 class="mb-6"></h1>
+    <h2 class="mb-3">Relatório</h2>
+    <div class="table-responsive">
+      <table class="table custom-table">
+        <thead>
+          <tr>
+          <!--    <th scope="col">Estado</th> -->
+            <th scope="col">Equipamento</th>
+          <!--  <th scope="col">Data</th> --> 
+            <th class="col-2" scope="col"></th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="informacao : ${listaInformacao}">          	
+            <!--   <td><span th:text="${informacao.valorinfo}"></span></td> -->
+            <td> <span th:text="${informacao.equipamento}"></span></td>
+          <!--  <td> <span th:text="{informacao.datainfo}"></span></td> --> 
+           
+        </tbody>
+       
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+</body>
+
+</html>
