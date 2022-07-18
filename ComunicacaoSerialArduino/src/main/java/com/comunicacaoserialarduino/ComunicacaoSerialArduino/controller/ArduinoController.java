@@ -1,5 +1,7 @@
 package com.comunicacaoserialarduino.ComunicacaoSerialArduino.controller;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,20 +30,22 @@ public class ArduinoController {
 	// GET PARA RELATORIO DO BD
 		@GetMapping("/relatorio")
 		public String relatorio(Model model) {				
-		        List<Informacao> textoKB = (List<Informacao>) informacaoRepository.findAll();
-		        model.addAttribute("listaInformacao", textoKB);	        
+		        List<Informacao> informacao = (List<Informacao>) informacaoRepository.findAll();
+		        model.addAttribute("listaInformacao", informacao);	        
 		        return "relatorio";
 		    }
 	
 	// GET PARA LIGAR A PORTA 13 DO ARDUINO E INFORMAR NO BD
 	@GetMapping("/ligar13")
-	public String ligarArduino() {
+	public String ligarArduino() { 
 		arduino.comunicacaoArduino("Ligar");		
 		informacao.setEquipamento("Ar-Condicionado");
 		informacao.setValorinfo("Ligado");
+		String timeStamp = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime());
+		informacao.setDatainfo(timeStamp);
 		informacaoRepository.save(informacao);
 		return "home";
-
+		
 	}
 	// GET PARA DESLIGAR A PORTA 13 DO ARDUINO E INFORMAR NO BD
 	@GetMapping("/desligar13")
@@ -49,6 +53,8 @@ public class ArduinoController {
 		arduino.comunicacaoArduino("Desligar");
 		informacao.setEquipamento("Ar-Condicionado");
 		informacao.setValorinfo("Desligado");
+		String timeStamp = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime());
+		informacao.setDatainfo(timeStamp);
 		informacaoRepository.save(informacao);
 		return "home";
 	}
@@ -58,6 +64,8 @@ public class ArduinoController {
 		arduino.comunicacaoArduino("Ligar12");
 		informacao.setEquipamento("Lampada");
 		informacao.setValorinfo("Ligado");
+		String timeStamp = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime());
+		informacao.setDatainfo(timeStamp);
 		informacaoRepository.save(informacao);
 		return "home";
 
@@ -68,6 +76,8 @@ public class ArduinoController {
 		arduino.comunicacaoArduino("Desligar12");
 		informacao.setEquipamento("Lampada");
 		informacao.setValorinfo("Desligado");
+		String timeStamp = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime());
+		informacao.setDatainfo(timeStamp);
 		informacaoRepository.save(informacao);
 		return "home";
 
@@ -78,6 +88,8 @@ public class ArduinoController {
 		arduino.comunicacaoArduino("Ligar11");
 		informacao.setEquipamento("TV");
 		informacao.setValorinfo("Ligado");
+		String timeStamp = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime());
+		informacao.setDatainfo(timeStamp);
 		informacaoRepository.save(informacao);
 		return "home";
 
@@ -88,6 +100,8 @@ public class ArduinoController {
 		arduino.comunicacaoArduino("Desligar11");
 		informacao.setEquipamento("TV");
 		informacao.setValorinfo("Desligado");
+		String timeStamp = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime());
+		informacao.setDatainfo(timeStamp);
 		informacaoRepository.save(informacao);
 		return "home";
 	}	

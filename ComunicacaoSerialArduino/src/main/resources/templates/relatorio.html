@@ -3,6 +3,19 @@
   xmlns:sec="https://www.thymeleaf.org/thymleaf-extras-springsecurity5">
 
 <head>
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Changa:wght@500&family=Staatliches&display=swap');
+ h2 {
+  font-family: 'Staatliches', cursive;
+  }
+  
+  h5{
+    font-family: 'Chakra Petch', sans-serif;   
+  }
+</style>
+
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,62 +32,59 @@
   <title>Relatório</title>
 </head>
 
-<body>
+<body class="relat">
   <header>
-    <div id="header">
-      <!-- Navbar -->
-      <!-- Navbar -->
+    <div id="header">   
       <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
         <div class="container"> 
             <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <!-- Somente o ADM Visualiza o campo para um novo procedimento -->
+              <li class="nav-item">               
                 <div>
                   <a class="nav-link" href="/index">Inicio</a>
                 </div>
               </li>
-              <li class="nav-item">
-                <!-- Somente o Usuario Visualiza o campo para um novo Chamado -->
+              <li class="nav-item">                
                 <div>
-                  <a class="nav-link" href="/home">Sistema</a>
+                  <a class="nav-link" href="/home">Sistema</a>                  
                 </div>
               </li>             
-            </ul>
-            <!-- Logout da sessao  -->            
+            </ul>                                  
           </div>
         </div>
       </nav>
+      </div>
   </header>
   <!-- Navbar -->
 
   <div class="container">
-    <h1 class="mb-6"></h1>
+    <br><br><br>
     <h2 class="mb-3">Relatório</h2>
     <div class="table-responsive">
-      <table class="table custom-table">
+      
+      <table class="table table-dark">
         <thead>
-          <tr>
-          <!--    <th scope="col">Estado</th> -->
-            <th scope="col">Equipamento</th>
-          <!--  <th scope="col">Data</th> --> 
-            <th class="col-2" scope="col"></th>
-
+          <tr>            
+            <th scope="col"><h5>Estado</h5></th>
+            <th scope="col"><h5>Equipamento</h5></th>
+            <th scope="col"><h5>Data</h5></th>
           </tr>
         </thead>
         <tbody>
-          <tr th:each="informacao : ${listaInformacao}">          	
-            <!--   <td><span th:text="${informacao.valorinfo}"></span></td> -->
-            <td> <span th:text="${informacao.equipamento}"></span></td>
-          <!--  <td> <span th:text="{informacao.datainfo}"></span></td> --> 
-           
-        </tbody>
-       
+          <tr scope="row" th:each="informacao : ${listaInformacao}">
+            <td><span th:text="${informacao.valorinfo}"></span></td>
+            <td><span th:text="${informacao.equipamento}"></span></td>           
+            <td><span th:text="${informacao.datainfo}"></span></td>
+          </tr>          
         </tbody>
       </table>
     </div>
   </div>
   
 </body>
-
+<footer><ul class="nav justify-content-center">
+        <li class="nav-item">
+      <a class="nav-link disabled">Academia Java Atos/UFN ©2022</a>
+    </li>
+    </ul></footer> 
 </html>

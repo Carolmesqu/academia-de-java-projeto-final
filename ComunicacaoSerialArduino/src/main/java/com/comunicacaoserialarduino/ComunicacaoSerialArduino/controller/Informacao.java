@@ -14,14 +14,7 @@ public class Informacao {
 	private String valorinfo;
 	private String equipamento;
 	private String datainfo;
-	
-	public String getDatainfo() {
-		return datainfo;
-	}
-	public void setDatainfo(String datainfo) {
-		this.datainfo = datainfo;
-	}
-		
+			
 	public Long getIdinfo() {
 		return idinfo;
 	}
@@ -41,5 +34,13 @@ public class Informacao {
 	public void setEquipamento(String equipamento) {
 		this.equipamento = equipamento;
 	}
+	public String getDatainfo() {
+		return datainfo;
+	}
+	public void setDatainfo(String datainfo) {
+		this.datainfo = datainfo;
+	}
+	
+	
 
 }

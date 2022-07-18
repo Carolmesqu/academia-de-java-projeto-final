@@ -12,6 +12,10 @@ body {
 	height: 100vh;
 }
 
+.relat{
+	background-image: url('/image/mesa.jpg');
+}
+
 .principal {
 	display: flex;
 	justify-content: space-between;
