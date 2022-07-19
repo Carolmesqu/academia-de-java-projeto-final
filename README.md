@@ -1,15 +1,15 @@
 # Projetos
 
-<h2>Comunicação Serial Arduino + Web Java</h2>
-<h1>Springboot + Arduino</h1>
-Projeto desenvolvido com IDE do Arduino na linguagem<br>
+<h1>Comunicação Serial Arduino + Web Java</h1>
+<h2>Springboot + Arduino</h2>
+<h3>Projeto desenvolvido com IDE do Arduino na linguagem<br>
 C e Eclipse na linguagem Java, utilizando o MySQL<br>
 para armazenar as informações de quando for ligado<br>
-e delisgado cada objeto com horário e data.<br>
+e delisgado cada objeto com horário e data.<br><h3>
 
-<h1>Tecnologias utilizadas:</h1>
+<h2>Tecnologias utilizadas:</h2>
 
-- Springboot dependencias:<br>
+<h3>- Springboot dependencias:<br>
   <br>
   <br>
 Thymeleaf<br>
@@ -21,5 +21,5 @@ Driver MySQL<br>
   <br>
   Linguagem C<br>
   <br>
-  (Para conseguirmos acessar a porta do Arduino pelo Java é necessario instalar o driver RXTX e biblioteca RXTX.jar.)
+  (Para conseguirmos acessar a porta do Arduino pelo Java é necessario instalar o driver RXTX e biblioteca RXTX.jar.)</h3>
   
