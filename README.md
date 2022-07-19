@@ -9,15 +9,14 @@ para armazenar as informações de quando for ligado<br>
 
 <div><h2>Tecnologias utilizadas:</h2>
 
-<h3>- Springboot dependencias:<br>
- 
+<h3>- Springboot dependencias:<br> 
 Thymeleaf<br>
 Spring web<br>
 JPA <br>
 Driver MySQL<br>  
-  <br>
-  - Arduino:<br> 
-  Linguagem C<br>
-  <br>
-  (Para conseguirmos acessar a porta do Arduino pelo Java é necessario instalar o driver RXTX e biblioteca RXTX.jar.)</h3></div>
+<br>
+- Arduino:<br> 
+Linguagem C<br>
+<br>
+(Para conseguirmos acessar a porta do Arduino pelo Java é necessario instalar o driver RXTX e biblioteca RXTX.jar.)</h3></div>
   
