@@ -8,7 +8,7 @@ e delisgado cada objeto com horário e data.<br>
 
 <h1>Tecnologias utilizadas:<h1>
 
-- Springboot dependencias:
+- Springboot dependencias:<br>
 Thymeleaf<br>
 Spring web<br>
 JPA <br>
