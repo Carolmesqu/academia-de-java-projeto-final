@@ -9,7 +9,16 @@ e delisgado cada objeto com horário e data.<br>
 <h1>Tecnologias utilizadas:<h1>
 
 - Springboot dependencias:<br>
+  <br>
+  <br>
 Thymeleaf<br>
 Spring web<br>
 JPA <br>
 Driver MySQL<br>
+  <br>
+  <br>
+  - Arduino:<br>
+ <br>
+  <br>
+  Linguagem C
+  
