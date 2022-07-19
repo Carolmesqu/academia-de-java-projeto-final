@@ -18,5 +18,7 @@ Driver MySQL<br>
   <br>
   - Arduino:<br>
   <br>
-  Linguagem C
+  Linguagem C<br>
+  <br>
+  (Para conseguirmos acessar a porta do Arduino pelo Java é necessario instalar o driver RXTX e biblioteca RXTX.jar.)
   
