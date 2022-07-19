@@ -1,15 +1,15 @@
 # Projetos
 
-Springboot + Arduino
-Projeto desenvolvido com IDE do Arduino na linguagem
-C e Eclipse na linguagem Java, utilizando o MySQL
-para armazenar as informações de quando for ligado
-e delisgado cada objeto com horário e data.
+<h1>Springboot + Arduino<h1>
+Projeto desenvolvido com IDE do Arduino na linguagem<br>
+C e Eclipse na linguagem Java, utilizando o MySQL<br>
+para armazenar as informações de quando for ligado<br>
+e delisgado cada objeto com horário e data.<br>
 
-Tecnologias utilizadas: 
+<h1>Tecnologias utilizadas:<h1>
 
 - Springboot dependencias:
-Thymeleaf 
-Spring web
-JPA 
-Driver MySQL
+Thymeleaf<br>
+Spring web<br>
+JPA <br>
+Driver MySQL<br>
