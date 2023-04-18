@@ -1,4 +1,4 @@
-# Projetos
+# Academia de Java Projeto Final
 
 <div><h1>Comunicação Serial Arduino + Web Java</h1>
 <h2>Springboot + Arduino</h2>
